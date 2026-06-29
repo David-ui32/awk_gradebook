@@ -13,7 +13,7 @@ Result:
 Explanation:
 The script skips the header row using `NR>1`, counts every submission in the file, and prints the total number of submissions in the `END` block.
 
-## Task 2
+## Task  2
 
 Command:
 ```bash
