@@ -71,7 +71,7 @@ Result:
 Explanation:
 The script compares each score (`$4`) with 60% of the maximum possible score (`$5`). If the score is below 60%, the submission is considered failing and counted. The `END` block prints the total number of failing submissions.
 
-## Task 5
+## Task  5
 
 Command:
 ```bash
