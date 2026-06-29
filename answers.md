@@ -109,7 +109,7 @@ L04     25    50   40.36
 Explanation:
 The AWK script uses associative arrays indexed by assignment name. For each assignment it tracks the minimum score, maximum score, total score, and number of submissions. In the `END` block it calculates and prints the low score, high score, and average score for every assignment.
 
-## Task 6
+## Task  6
 
 Command:
 ```bash
