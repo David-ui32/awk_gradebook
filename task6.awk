@@ -16,26 +16,14 @@ NR==1 {
 }
 
 END {
-    printf "%-10s %-10s %-5s\n", "Student", "Percent", "Grade"
-
-    n = asorti(earned, students)
-
-    for (i = 1; i <= n; i++) {
-        student = students[i]
-        percent = (earned[student] / possible[student]) * 100
-
-        if (percent >= 90)
-            grade = "A"
-        else if (percent >= 80)
-            grade = "B"
-        else if (percent >= 70)
-            grade = "C"
-        else if (percent >= 60)
-            grade = "D"
-        else
-            grade = "F"
-
-        printf "%-10s %-10.2f %-5s\n",
-               student, percent, grade
+    printf "%-10s %7s %s\n", "Name", "Percent", "Letter"
+    for (st in earned) {
+        p = 100 * earned[st] / poss[st]
+        if (p >= 90) g = "A"
+        else if (p >= 80) g = "B"
+        else if (p >= 70) g = "C"
+        else if (p >= 60) g = "D"
+        else g = "E"
+        printf "%-10s %7.2f %s\n", st, p, g
     }
 }

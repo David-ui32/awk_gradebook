@@ -24,18 +24,8 @@ NR==1 {
 }
 
 END {
-
-    printf "%-10s %-10s %-10s %-10s\n",
-    "Name","Low","High","Average"
-
-    for(assignment in sum) {
-
-        average=sum[assignment]/count[assignment]
-
-        printf "%-10s %-10d %-10d %-10.2f\n",
-        assignment,
-        min[assignment],
-        max[assignment],
-        average
+    printf "%-8s %5s %5s %9s\n", "Name", "Low", "High", "Average"
+    for (a in s) {
+        printf "%-8s %5d %5d %9.2f\n", a, lo[a], hi[a], s[a]/n[a]
     }
 }
