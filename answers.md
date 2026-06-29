@@ -28,7 +28,7 @@ Result:
 Explanation:
 The script uses an associative array named `seen` to store each student name as a unique key. Since duplicate keys are not counted more than once, the `END` block counts the total number of different students.
 
-## Task 3
+## Task  3
 
 Command:
 ```bash
