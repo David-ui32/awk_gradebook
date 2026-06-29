@@ -56,7 +56,7 @@ Chelsey    142
 Explanation:
 The script skips the header row and selects only records where the assignment name (`$3`) is `FINAL`. It then prints the student name (`$1`) and the final exam score (`$4`) using `printf` to align the output columns.
 
-## Task 4
+## Task  4
 
 Command:
 ```bash
