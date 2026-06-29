@@ -25,7 +25,7 @@ NR==1 {
 
 END {
     printf "%-8s %5s %5s %9s\n", "Name", "Low", "High", "Average"
-    for (a in s) {
-        printf "%-8s %5d %5d %9.2f\n", a, lo[a], hi[a], s[a]/n[a]
+    for (a in sum) {
+        printf "%-8s %5d %5d %9.2f\n", a, min[a], max[a], sum[a]/count[a]
     }
 }

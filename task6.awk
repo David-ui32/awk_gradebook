@@ -18,7 +18,7 @@ NR==1 {
 END {
     printf "%-10s %7s %s\n", "Name", "Percent", "Letter"
     for (st in earned) {
-        p = 100 * earned[st] / poss[st]
+        p = 100 * earned[st] / possible[st]
         if (p >= 90) g = "A"
         else if (p >= 80) g = "B"
         else if (p >= 70) g = "C"

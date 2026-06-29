@@ -118,21 +118,21 @@ awk -f student_grade.awk Lab03-data.csv
 
 Result:
 ```text
-Student   Percent   Grade
-Tomas      82.22      B
-Diana      62.08      D
-Andrew     73.69      C
-Lucia      89.53      B
-Kenji      86.45      B
-Chelsey    62.65      D
-Eliza      84.16      B
-Shane      93.12      A
-Noah       63.08      D
-Ava        81.43      B
-Maria      79.57      C
-Priya      71.04      C
-Jackson    78.64      C
-Sam        72.90      C
+Name       Percent Letter
+Tomas        82.22 B
+Diana        62.08 D
+Andrew       73.69 C
+Lucia        89.53 B
+Kenji        86.45 B
+Chelsey      62.65 D
+Eliza        84.16 B
+Shane        93.12 A
+Noah         63.08 D
+Ava          81.43 B
+Maria        79.57 C
+Priya        71.04 C
+Jackson      78.64 C
+Sam          72.90 C
 ```
 
 Explanation:
@@ -147,21 +147,21 @@ Command:
 
 Result:
 ```text
-Student   Percent   Grade
-Andrew     73.69      C
-Ava        81.43      B
-Chelsey    62.65      D
-Diana      62.08      D
-Eliza      84.16      B
-Jackson    78.64      C
-Kenji      86.45      B
-Lucia      89.53      B
-Maria      79.57      C
-Noah       63.08      D
-Priya      71.04      C
-Sam        72.90      C
-Shane      93.12      A
-Tomas      82.22      B
+Name       Percent Letter
+Andrew       73.69 C
+Ava          81.43 B
+Chelsey      62.65 D
+Diana        62.08 D
+Eliza        84.16 B
+Jackson      78.64 C
+Kenji        86.45 B
+Lucia        89.53 B
+Maria        79.57 C
+Noah         63.08 D
+Priya        71.04 C
+Sam          72.90 C
+Shane        93.12 A
+Tomas        82.22 B
 ```
 
 Explanation:
