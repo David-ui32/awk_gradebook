@@ -138,7 +138,7 @@ Sam        72.90      C
 Explanation:
 The script accumulates earned points and maximum possible points for each student using associative arrays. It calculates the overall percentage as total earned points divided by total possible points multiplied by 100. A letter grade is assigned using an if/else chain.
 
-## Task 7
+## Task  7
 
 Command:
 ```bash
