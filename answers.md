@@ -1,4 +1,4 @@
-## Task  1
+## Task 1
 
 Command:
 ```bash
@@ -13,7 +13,7 @@ Result:
 Explanation:
 The script skips the header row using `NR>1`, counts every submission in the file, and prints the total number of submissions in the `END` block.
 
-## Task  2
+## Task 2
 
 Command:
 ```bash
@@ -28,7 +28,7 @@ Result:
 Explanation:
 The script uses an associative array named `seen` to store each student name as a unique key. Since duplicate keys are not counted more than once, the `END` block counts the total number of different students.
 
-## Task  3
+## Task 3
 
 Command:
 ```bash
@@ -56,7 +56,7 @@ Chelsey    142
 Explanation:
 The script skips the header row and selects only records where the assignment name (`$3`) is `FINAL`. It then prints the student name (`$1`) and the final exam score (`$4`) using `printf` to align the output columns.
 
-## Task  4
+## Task 4
 
 Command:
 ```bash
