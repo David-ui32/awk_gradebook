@@ -71,98 +71,23 @@ Result:
 Explanation:
 The script compares each score (`$4`) with 60% of the maximum possible score (`$5`). If the score is below 60%, the submission is considered failing and counted. The `END` block prints the total number of failing submissions.
 
-## Task  5
+## Task 5
+Command: awk -f task5.awk Lab03-data.csv 
 
-Command:
-```bash
-awk -f assignment_report.awk Lab03-data.csv
-```
+Result: Name Low High Average FINAL 116 200 156.86 H01 46 100 82.71 H02 55 100 77.57 H03 62 100 82.43 H04 32 97 72.93 H05 51 100 74.00 H06 37 98 74.21 H07 40 100 72.93 L01 27 50 40.21 L02 23 50 39.21 L03 19 50 36.57 L04 25 50 40.36 L05 17 50 38.21 L06 27 50 40.07 L07 21 50 38.43 Q01 9 20 14.29 Q02 9 20 14.86 Q03 8 20 15.07 Q04 13 20 16.43 Q05 8 18 15.07 Q06 8 20 14.71 Q07 12 20 15.36 WS 2 5 4.21 
 
-Result:
-```text
-Name   Low  High  Average
-Q06      8    20   14.71
-L05     17    50   38.21
-WS       2     5    4.21
-L06     27    50   40.07
-Q07     12    20   15.36
-L07     21    50   38.43
-H01     46   100   82.71
-H02     55   100   77.57
-H03     62   100   82.43
-H04     32    97   72.93
-H05     51   100   74.00
-H06     37    98   74.21
-H07     40   100   72.93
-Q01      9    20   14.29
-L01     27    50   40.21
-Q02      9    20   14.86
-L02     23    50   39.21
-Q03      8    20   15.07
-L03     19    50   36.57
-Q04     13    20   16.43
-FINAL  116   200  156.86
-Q05      8    18   15.07
-L04     25    50   40.36
-```
+Explanation: The script stores sums, counts, minimums, and maximums inside associative arrays indexed by the assignment name ($3). In the END block, it loops through all tasks, computes the statistical average, and uses printf to output the formatted columns.
 
-Explanation:
-The AWK script uses associative arrays indexed by assignment name. For each assignment it tracks the minimum score, maximum score, total score, and number of submissions. In the `END` block it calculates and prints the low score, high score, and average score for every assignment.
+## Task 6
+Command: awk -f task6.awk Lab03-data.csv 
 
-## Task  6
+Result: Student Percentage Grade Andrew 73.69 C Ava 81.43 B Chelsey 62.65 D Diana 62.08 D Eliza 84.16 B Jackson 78.64 C Kenji 86.45 B Lucia 89.53 B Maria 79.57 C Noah 63.08 D Priya 71.04 C Sam 72.90 C Shane 93.12 A Tomas 82.22 B 
 
-Command:
-```bash
-awk -f student_grade.awk Lab03-data.csv
-```
+Explanation: The script accumulates the total earned points and total possible points for each student using two associative arrays indexed by student name ($1). At the end, it calculates the dynamic final percentage and determines the letter grade using an if-else structure.
 
-Result:
-```text
-Name       Percent Letter
-Tomas        82.22 B
-Diana        62.08 D
-Andrew       73.69 C
-Lucia        89.53 B
-Kenji        86.45 B
-Chelsey      62.65 D
-Eliza        84.16 B
-Shane        93.12 A
-Noah         63.08 D
-Ava          81.43 B
-Maria        79.57 C
-Priya        71.04 C
-Jackson      78.64 C
-Sam          72.90 C
-```
+## Task 7
+Command: ./run.sh Lab03-data.csv 
 
-Explanation:
-The script accumulates earned points and maximum possible points for each student using associative arrays. It calculates the overall percentage as total earned points divided by total possible points multiplied by 100. A letter grade is assigned using an if/else chain.
+Result: Student Percentage Grade Andrew 73.69 C Ava 81.43 B Chelsey 62.65 D Diana 62.08 D Eliza 84.16 B Jackson 78.64 C Kenji 86.45 B Lucia 89.53 B Maria 79.57 C Noah 63.08 D Priya 71.04 C Sam 72.90 C Shane 93.12 A Tomas 82.22 B 
 
-## Task  7
-
-Command:
-```bash
-./run.sh Lab03-data.csv
-```
-
-Result:
-```text
-Name       Percent Letter
-Andrew       73.69 C
-Ava          81.43 B
-Chelsey      62.65 D
-Diana        62.08 D
-Eliza        84.16 B
-Jackson      78.64 C
-Kenji        86.45 B
-Lucia        89.53 B
-Maria        79.57 C
-Noah         63.08 D
-Priya        71.04 C
-Sam          72.90 C
-Shane        93.12 A
-Tomas        82.22 B
-```
-
-Explanation:
-The Bash script receives the CSV filename as an argument, executes the Task 6 AWK script, preserves the header row, and sorts the remaining student records alphabetically by name before printing the final report.
+Explanation: The Bash script reads the input file passed as an argument, extracts and displays the header row independently using head, and then processes the remaining body records through tail and the Unix sort tool to organize students alphabetically.
