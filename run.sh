@@ -1,11 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-FILE=$1
+# Verifica que se pase el archivo de datos como argumento
+if [ -z "${1:-}" ]; then
+    echo "Usage: $0 <data_file>"
+    exit 1
+fi
 
-awk -f student_grade.awk "$FILE" > temp.txt
+# 1. Extrae y muestra la primera línea (el encabezado) que genera tu script de la Task 6
+awk -f task6.awk "$1" | head -n 1
 
-head -n 1 temp.txt
-
-tail -n +2 temp.txt | sort
-
-rm temp.txt
+# 2. Toma el resto de las líneas (de la 2 en adelante), las ordena alfabéticamente y las muestra
+awk -f task6.awk "$1" | tail -n +2 | LC_ALL=C sort
