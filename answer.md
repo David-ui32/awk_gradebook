@@ -1,4 +1,4 @@
-# Task 1
+## Task 1
 
 Command:
 ```bash
@@ -13,7 +13,7 @@ Result:
 Explanation:
 The script skips the header row using `NR>1`, counts every submission in the file, and prints the total number of submissions in the `END` block.
 
-# Task 2
+## Task 2
 
 Command:
 ```bash
@@ -28,7 +28,7 @@ Result:
 Explanation:
 The script uses an associative array named `seen` to store each student name as a unique key. Since duplicate keys are not counted more than once, the `END` block counts the total number of different students.
 
-# Task 3
+## Task 3
 
 Command:
 ```bash
@@ -56,7 +56,7 @@ Chelsey    142
 Explanation:
 The script skips the header row and selects only records where the assignment name (`$3`) is `FINAL`. It then prints the student name (`$1`) and the final exam score (`$4`) using `printf` to align the output columns.
 
-# Task 4
+## Task 4
 
 Command:
 ```bash
@@ -71,7 +71,7 @@ Result:
 Explanation:
 The script compares each score (`$4`) with 60% of the maximum possible score (`$5`). If the score is below 60%, the submission is considered failing and counted. The `END` block prints the total number of failing submissions.
 
-# Task 5
+## Task 5
 
 Command:
 ```bash
@@ -109,7 +109,7 @@ L04     25    50   40.36
 Explanation:
 The AWK script uses associative arrays indexed by assignment name. For each assignment it tracks the minimum score, maximum score, total score, and number of submissions. In the `END` block it calculates and prints the low score, high score, and average score for every assignment.
 
-# Task 6
+## Task 6
 
 Command:
 ```bash
@@ -138,7 +138,7 @@ Sam        72.90      C
 Explanation:
 The script accumulates earned points and maximum possible points for each student using associative arrays. It calculates the overall percentage as total earned points divided by total possible points multiplied by 100. A letter grade is assigned using an if/else chain.
 
-# Task 7
+## Task 7
 
 Command:
 ```bash
